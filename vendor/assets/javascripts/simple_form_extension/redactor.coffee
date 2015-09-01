@@ -15,6 +15,7 @@ class Redactor
         'image', 'file','link', 'alignment', 'horizontalrule']
       removeEmpty: ['strong', 'em', 'span', 'p', 'h1', 'h2', 'h3', 'h4', 'div']
       minHeight: config.min_height
+      maxHeight: 400
       buttonSource: true
       replaceDivs: false
       linebreaks: false
