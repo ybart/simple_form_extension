@@ -15,8 +15,10 @@ class DateTimePicker
       lang: @locale
       format: @$input.data('format')
       step: parseInt @$input.data('step')
-      maxDate: @$input.data('maxDate')
-      minDate: @$input.data('minDate')
+      maxDate: @$input.data('maxdate')
+      minDate: @$input.data('mindate')
+      yearStart: @$input.data('yearstart')
+      yearEnd: @$input.data('yearend')
       dayOfWeekStart: @$input.data('week-start-day')
     )
 
@@ -29,8 +31,10 @@ class DatePicker extends DateTimePicker
       lang: @locale
       timepicker: false
       step: parseInt @$input.data('step')
-      maxDate: @$input.data('maxDate')
-      minDate: @$input.data('minDate')
+      maxDate: @$input.data('maxdate')
+      minDate: @$input.data('mindate')
+      yearStart: @$input.data('yearstart')
+      yearEnd: @$input.data('yearend')
       format: @$input.data('format')
       dayOfWeekStart: @$input.data('week-start-day')
     )
@@ -41,8 +45,10 @@ class TimePicker extends DateTimePicker
       lang: @locale
       datepicker: false,
       step: parseInt @$input.data('step')
-      maxDate: @$input.data('maxDate')
-      minDate: @$input.data('minDate')
+      maxDate: @$input.data('maxdate')
+      minDate: @$input.data('mindate')
+      yearStart: @$input.data('yearstart')
+      yearEnd: @$input.data('yearend')      
       format: @$input.data('format')
     )
 
