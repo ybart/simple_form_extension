@@ -26,7 +26,7 @@ class Redactor
           title: 'Image 100%'
           class: 'img-responsive'
         }
-      ].concat($('body').data('redactor-config').formattingAdd || [])
+      ]
       imageUpload: ["/redactor_rails/pictures", params].join('?')
       imageManagerJson: "/redactor_rails/pictures"
       fileUpload: ["/redactor_rails/documents", params].join('?')
