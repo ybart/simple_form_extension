@@ -7,12 +7,12 @@ class DateTimePicker
 
   constructor: (@$input) ->
     @locale = $('html').attr('lang') || 'en'
+    $.datetimepicker.setLocale(@locale)
     @$input.data('simple-form-extension-datetimepicker', this)
     @initializePicker()
 
   initializePicker: ->
     @$input.datetimepicker(
-      lang: @locale
       format: @$input.data('format')
       step: parseInt @$input.data('step')
       maxDate: @$input.data('maxdate')
@@ -20,6 +20,7 @@ class DateTimePicker
       yearStart: @$input.data('yearstart')
       yearEnd: @$input.data('yearend')
       dayOfWeekStart: @$input.data('week-start-day')
+      defaultTime: @$input.data('default-time')
     )
 
   show: ->
@@ -28,7 +29,6 @@ class DateTimePicker
 class DatePicker extends DateTimePicker
   initializePicker: ->
     @$input.datetimepicker(
-      lang: @locale
       timepicker: false
       step: parseInt @$input.data('step')
       maxDate: @$input.data('maxdate')
@@ -42,14 +42,14 @@ class DatePicker extends DateTimePicker
 class TimePicker extends DateTimePicker
   initializePicker: ->
     @$input.datetimepicker(
-      lang: @locale
       datepicker: false,
       step: parseInt @$input.data('step')
       maxDate: @$input.data('maxdate')
       minDate: @$input.data('mindate')
       yearStart: @$input.data('yearstart')
-      yearEnd: @$input.data('yearend')      
+      yearEnd: @$input.data('yearend')
       format: @$input.data('format')
+      defaultTime: @$input.data('default-time')
     )
 
 
@@ -78,4 +78,3 @@ $.simpleForm.onDomReady ($document) ->
   $('body').on 'click', '.time .datetimepicker-trigger', (e) ->
     $input = $(e.currentTarget).closest('.time').find('input.time')
     TimePicker.forInput($input, TimePicker).show()
-

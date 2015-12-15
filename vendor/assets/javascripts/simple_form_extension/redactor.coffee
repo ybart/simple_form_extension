@@ -41,6 +41,7 @@ class Redactor
         "fontsize"
         "fontfamily"
         "scriptbuttons"
+        "imagepx"
       ]
       path: "/assets/redactor-rails"
       lang: "fr"
