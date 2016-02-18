@@ -33,7 +33,7 @@ module SimpleFormExtension
           end
         end +
 
-        existing_file_tag
+        existing_file_tag.force_encoding("UTF-8")
       end
 
       def existing_file_tag
