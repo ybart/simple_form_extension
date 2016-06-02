@@ -38,6 +38,7 @@ module SimpleFormExtension
 
       def existing_file_tag
         return '' unless has_file?
+        return '' if object.send(attribute_name).is_a?(Array)
 
         url = object.send(attribute_name).url
 
