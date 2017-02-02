@@ -33,8 +33,6 @@ class Redactor
       fileManagerJson: "/redactor_rails/documents"
       plugins: [
         "clips"
-        "filemanager"
-        "imagemanager"
         "video"
         "table"
         "fontcolor"
